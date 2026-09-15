@@ -180,7 +180,59 @@ animatedElements.forEach(element => {
     observer.observe(element);
 
 });
+const projectImages = [
+    "images/devsecops-1.png",
+    "images/devsecops-2.png",
+    "images/devsecops-3.png",
+    "images/devsecops-4.png"
+];
 
+let currentImage = 0;
+
+function openGallery(index) {
+
+    currentImage = index;
+
+    document.getElementById("imageGallery").style.display = "flex";
+
+    showGalleryImage();
+}
+
+function showGalleryImage() {
+
+    document.getElementById("galleryImage").src =
+        projectImages[currentImage];
+
+    document.getElementById("galleryCounter").textContent =
+        (currentImage + 1) + " / " + projectImages.length;
+}
+
+function nextImage() {
+
+    currentImage++;
+
+    if (currentImage >= projectImages.length) {
+        currentImage = 0;
+    }
+
+    showGalleryImage();
+}
+
+function previousImage() {
+
+    currentImage--;
+
+    if (currentImage < 0) {
+        currentImage = projectImages.length - 1;
+    }
+
+    showGalleryImage();
+}
+
+function closeGallery() {
+
+    document.getElementById("imageGallery").style.display = "none";
+}
 /* =====================================================
    CERTIFICATE GALLERY
    ===================================================== */

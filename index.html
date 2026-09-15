@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Singathurai | DevOps Engineer</title>
-
+     <link rel="icon" type="image/png" href="images/logo.png">
     <meta name="description"
           content="Singathurai - DevOps Engineer and Software Developer Portfolio">
     
@@ -26,7 +26,31 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+<!-- IMAGE GALLERY -->
 
+<div id="imageGallery" class="image-gallery">
+
+    <button class="gallery-close" onclick="closeGallery()">
+        &times;
+    </button>
+
+    <button class="gallery-prev" onclick="previousImage()">
+        &#10094;
+    </button>
+
+    <img id="galleryImage"
+         src=""
+         alt="Project Screenshot">
+
+    <button class="gallery-next" onclick="nextImage()">
+        &#10095;
+    </button>
+
+    <div id="galleryCounter" class="gallery-counter">
+        1 / 4
+    </div>
+
+</div>
 <body>
 
 <!-- ================= NAVBAR ================= -->
@@ -158,8 +182,7 @@
 
         <div class="image-border">
 
-            <img src="d:\documents\AVNL_photo_150KB.jpg"
-                 alt="Singathurai profile photo">
+            <img src="images/profile.jpg" alt="Singathurai">
 
         </div>
 
@@ -486,66 +509,56 @@
 
     <div class="projects-grid">
 
+<!-- PROJECT 1 -->
 
-        <!-- PROJECT 1 -->
+<div class="project-card">
 
-        <div class="project-card">
+    <div class="project-image">
 
-            <div class="project-image">
+       <img src="images/projects/devsecops/devsecops-1.png"
+     alt="DevSecOps GitOps Project"
+             onclick="openGallery(0)">
 
-                <img src="c:\Users\ELCOT\Downloads\devsecops.png"
-                     alt="DevSecOps GitOps project">
+    </div>
 
-            </div>
+    <div class="project-content">
 
+        <h3>DevSecOps + GitOps Pipeline</h3>
 
-            <div class="project-content">
+        <p>
+            End-to-end CI/CD pipeline with automated
+            build, security scanning, code quality
+            analysis and deployment.
+        </p>
 
-                <h3>
-                    DevSecOps + GitOps Pipeline
-                </h3>
-
-                <p>
-                    End-to-end CI/CD pipeline with automated
-                    build, security scanning, code quality
-                    analysis and deployment.
-                </p>
-
-
-                <div class="project-tags">
-
-                    <span>Jenkins</span>
-                    <span>Docker</span>
-                    <span>SonarQube</span>
-                    <span>Trivy</span>
-                    <span>GitOps</span>
-
-                </div>
-
-
-                <a href="https://github.com/singathurai007/devsecops-gitops"
-                   target="_blank"
-                   class="project-link">
-
-                    View on GitHub
-                    <i class="fas fa-arrow-right"></i>
-
-                </a>
-
-            </div>
-
+        <div class="project-tags">
+            <span>Jenkins</span>
+            <span>Docker</span>
+            <span>SonarQube</span>
+            <span>Trivy</span>
+            <span>GitOps</span>
         </div>
 
+        <a href="https://github.com/singathurai007/devsecops-gitops"
+           target="_blank"
+           class="project-link">
 
+            View on GitHub
+            <i class="fas fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</div>
         <!-- PROJECT 2 -->
 
         <div class="project-card">
 
             <div class="project-image">
 
-                <img src="images/terraform-jenkins.png"
-                     alt="Terraform Jenkins project">
-
+             <img src="images/projects/terraform-jenkins/terraform-jenkins-1.png"
+     alt="Terraform and Ansible AWS Project">
             </div>
 
 
@@ -591,8 +604,8 @@
 
             <div class="project-image">
 
-                <img src="c:\Users\ELCOT\Downloads\grafana.png"
-                     alt="Prometheus Grafana monitoring project">
+            <img src="images/projects/monitoring/monitoring-1.png"
+     alt="Prometheus Grafana Monitoring Project">
 
             </div>
 
@@ -640,8 +653,8 @@
 
             <div class="project-image">
 
-                <img src="images/github-actions.png"
-                     alt="GitHub Actions deployment project">
+                <img src="images/projects/github-actions/github-actions-1.png"
+     alt="GitHub Actions CI/CD Project">
 
             </div>
 
@@ -714,7 +727,7 @@
             <div class="display-top">
 
                 <span class="display-number" id="certNumber">
-                    01 / 05
+                    01 / 06
                 </span>
 
                 <span class="display-status">
@@ -729,7 +742,7 @@
 
                 <img
                     id="mainCertificate"
-                    src="d:\certificates\Screenshot (15).png"
+                    src="images/certificates/aws.png"
                     alt="AWS Cloud Practitioner Essentials Certificate"
                 >
 
@@ -753,7 +766,7 @@
 
                 <a
                     id="mainLink"
-                    href="d:\certificates\aws.pdf"
+                    href="certificates/aws-cloud-practitioner-essentials.pdf"
                     target="_blank"
                     class="view-certificate"
                 >
@@ -772,13 +785,16 @@
             <div class="details-number">
                 <span>01</span>
                 <div></div>
-                <span>05</span>
+                <span>06</span>
             </div>
 
 
             <div class="details-content">
 
-                <span class="details-label">
+                <span
+                    class="details-label"
+                    id="detailLabel"
+                >
                     AWS TRAINING & CERTIFICATION
                 </span>
 
@@ -800,6 +816,7 @@
 
                         <div>
                             <span>DATE</span>
+
                             <strong id="detailDate">
                                 June 17, 2026
                             </strong>
@@ -814,6 +831,7 @@
 
                         <div>
                             <span>PROVIDER</span>
+
                             <strong id="detailProvider">
                                 AWS Training & Certification
                             </strong>
@@ -826,7 +844,7 @@
 
                 <a
                     id="detailLink"
-                    href="d:\certificates\aws.pdf"
+                    href="certificates/aws-cloud-practitioner-essentials.pdf"
                     target="_blank"
                     class="verify-button"
                 >
@@ -842,9 +860,10 @@
 
 
     <!-- Certificate Selector -->
-
     <div class="certificate-selector">
 
+
+        <!-- 01 AWS -->
         <button
             class="certificate-thumb active"
             data-image="images/certificates/aws.png"
@@ -860,8 +879,8 @@
 
             <div class="thumb-image">
                 <img
-                    src="d:\certificates\Screenshot (15).png"
-                    alt="AWS Certificate"
+                    src="images/certificates/aws.png"
+                    alt="AWS Cloud Practitioner Essentials Certificate"
                 >
             </div>
 
@@ -873,9 +892,10 @@
         </button>
 
 
+        <!-- 02 IBM Cloud -->
         <button
             class="certificate-thumb"
-            data-image="d:\certificates\Screenshot (21).png"
+            data-image="images/certificates/cloud-computing.png"
             data-title="Cloud Computing Fundamentals"
             data-provider="IBM SkillsBuild"
             data-date="June 06, 2026"
@@ -888,8 +908,8 @@
 
             <div class="thumb-image">
                 <img
-                    src="d:\certificates\Screenshot (21).png"
-                    alt="IBM Certificate"
+                    src="images/certificates/cloud-computing.png"
+                    alt="IBM Cloud Computing Certificate"
                 >
             </div>
 
@@ -901,9 +921,10 @@
         </button>
 
 
+        <!-- 03 Software Engineering -->
         <button
             class="certificate-thumb"
-            data-image="d:\certificates\Screenshot (19).png"
+            data-image="images/certificates/software-engineering-uml.png"
             data-title="Software Engineering: Modeling Software Systems using UML"
             data-provider="The Hong Kong University of Science and Technology"
             data-date="March 18, 2025"
@@ -916,8 +937,8 @@
 
             <div class="thumb-image">
                 <img
-                    src="d:\certificates\Screenshot (19).png"
-                    alt="UML Certificate"
+                    src="images/certificates/software-engineering-uml.png"
+                    alt="Software Engineering UML Certificate"
                 >
             </div>
 
@@ -929,9 +950,10 @@
         </button>
 
 
+        <!-- 04 Security -->
         <button
             class="certificate-thumb"
-            data-image="d:\certificates\Screenshot (20).png"
+            data-image="images/certificates/security-risk-management.png"
             data-title="Security and Risk Management"
             data-provider="Packt"
             data-date="March 18, 2025"
@@ -944,8 +966,8 @@
 
             <div class="thumb-image">
                 <img
-                    src="d:\certificates\Screenshot (20).png"
-                    alt="Security Certificate"
+                    src="images/certificates/security-risk-management.png"
+                    alt="Security and Risk Management Certificate"
                 >
             </div>
 
@@ -957,9 +979,10 @@
         </button>
 
 
+        <!-- 05 Arduino -->
         <button
             class="certificate-thumb"
-            data-image="d:\certificates\Screenshot (18).png"
+            data-image="images/certificates/arduino.png"
             data-title="Interfacing with the Arduino"
             data-provider="University of California, Irvine"
             data-date="March 19, 2025"
@@ -972,8 +995,8 @@
 
             <div class="thumb-image">
                 <img
-                    src="d:\certificates\Screenshot (18).png"
-                    alt="Arduino Certificate"
+                    src="images/certificates/arduino.png"
+                    alt="Interfacing with the Arduino Certificate"
                 >
             </div>
 
@@ -984,35 +1007,35 @@
 
         </button>
 
-             <button
+
+        <!-- 06 IT Technical Support -->
+        <button
             class="certificate-thumb"
-            data-image="d:\certificates\Screenshot (17).png"
+            data-image="images/certificates/it-support-executive.png"
             data-title="IT Technical Support Executive"
             data-provider="Skill India / NSDC"
-            data-date="June 06, 2026"
-            data-label="Skill India / NSDC"
-            data-description="Online skilling course in IT Technical Support Executive.."
-            data-link="d:\certificates\Screenshot (17).png"
+            data-date=""
+            data-label="SKILL INDIA / NSDC"
+            data-description="Online skilling course in IT Technical Support Executive."
+            data-link="images/certificates/it-support-executive.png"
         >
 
-            <span>05</span>
+            <span>06</span>
 
             <div class="thumb-image">
                 <img
-                    src="d:\certificates\Screenshot (17).png"
-                    alt="IT TECHNICAL SUPPORT"
+                    src="images/certificates/it-support-executive.png"
+                    alt="IT Technical Support Executive Certificate"
                 >
             </div>
 
             <div class="thumb-info">
-                <strong>IT Technical Support Executive</strong>
-                <small>Skill India / NSDC</small>
+                <strong>IT SUPPORT</strong>
+                <small>Technical Support Executive</small>
             </div>
 
         </button>
 
-
-        
 
     </div>
 
