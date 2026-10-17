@@ -18,6 +18,7 @@
     <meta property="og:description"
           content="Software, Cloud and DevOps Engineer building automated CI/CD pipelines, AWS infrastructure as code, containerized applications and monitoring solutions.">
     <meta property="og:image" content="images/profile.jpg">
+    <meta property="og:url" content="https://singathurai007.github.io/singathurai-portfolio/">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -26,8 +27,49 @@
           content="Software, Cloud and DevOps Engineer portfolio.">
     <meta name="twitter:image" content="images/profile.jpg">
 
+    <meta name="color-scheme" content="dark light">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Apply the saved theme before paint to avoid a flash of the wrong theme -->
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem("theme");
+                if (saved) {
+                    document.documentElement.setAttribute("data-theme", saved);
+                }
+            } catch (error) {
+                /* localStorage unavailable - fall back to the default theme */
+            }
+        })();
+    </script>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Singathurai C",
+        "jobTitle": "Software, Cloud and DevOps Engineer",
+        "url": "https://singathurai007.github.io/singathurai-portfolio/",
+        "image": "https://singathurai007.github.io/singathurai-portfolio/images/profile.jpg",
+        "email": "mailto:cmsingathurai@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+        },
+        "sameAs": [
+            "https://github.com/singathurai007",
+            "https://www.linkedin.com/in/singathurai-c-168a49357"
+        ],
+        "knowsAbout": [
+            "AWS", "Terraform", "Jenkins", "Docker", "Kubernetes",
+            "CI/CD", "Linux", "Prometheus", "Grafana", "GitHub Actions"
+        ]
+    }
+    </script>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,14 +97,6 @@
         <a href="#home" class="logo">
             Singathurai<span>.</span>
         </a>
-
-        <button class="menu-toggle"
-                id="menu-toggle"
-                aria-label="Toggle navigation menu"
-                aria-expanded="false"
-                aria-controls="nav-menu">
-            <i class="fas fa-bars"></i>
-        </button>
 
         <ul class="nav-menu" id="nav-menu">
 
@@ -97,6 +131,26 @@
             </li>
 
         </ul>
+
+        <div class="nav-actions">
+
+            <button class="theme-toggle"
+                    id="theme-toggle"
+                    type="button"
+                    aria-label="Switch to light theme"
+                    aria-pressed="false">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <button class="menu-toggle"
+                    id="menu-toggle"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    aria-controls="nav-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </div>
 
     </nav>
 

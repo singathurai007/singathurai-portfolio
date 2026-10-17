@@ -28,7 +28,52 @@
 
     --border: #263449;
 
+    --header-bg: rgba(10, 15, 28, 0.90);
+    --on-accent: #06101c;
+
+    --glass-panel: rgba(255, 255, 255, 0.025);
+    --glass-row: rgba(255, 255, 255, 0.02);
+
     --max-width: 1150px;
+}
+
+
+/* =====================
+   LIGHT THEME
+   ===================== */
+
+[data-theme="light"] {
+    --bg-primary: #f7f9fc;
+    --bg-secondary: #eaeff6;
+    --bg-card: #ffffff;
+
+    --text-primary: #0f172a;
+    --text-secondary: #52627a;
+
+    --accent: #0284c7;
+    --accent-dark: #0369a1;
+
+    --border: #d7dfea;
+
+    --header-bg: rgba(255, 255, 255, 0.88);
+    --on-accent: #ffffff;
+
+    --glass-panel: rgba(15, 23, 42, 0.02);
+    --glass-row: rgba(15, 23, 42, 0.02);
+}
+
+[data-theme="light"] .primary-btn:hover {
+    background: var(--accent-dark);
+    color: var(--on-accent);
+}
+
+[data-theme="light"] .cert-details {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 23, 42, 0.03),
+            rgba(15, 23, 42, 0.01)
+        );
 }
 
 body {
@@ -36,6 +81,8 @@ body {
     background: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -86,7 +133,7 @@ img[onclick]:focus-visible {
     width: 100%;
     z-index: 1000;
 
-    background: rgba(10, 15, 28, 0.90);
+    background: var(--header-bg);
     backdrop-filter: blur(12px);
 
     border-bottom: 1px solid var(--border);
@@ -185,7 +232,7 @@ img[onclick]:focus-visible {
 
 .resume-btn:hover {
     background: var(--accent);
-    color: #06101c;
+    color: var(--on-accent);
 }
 
 
@@ -202,6 +249,49 @@ img[onclick]:focus-visible {
     font-size: 24px;
 
     cursor: pointer;
+}
+
+
+/* Navbar actions (theme toggle + menu button) */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* Theme Toggle */
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    color: var(--text-secondary);
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.theme-toggle:hover {
+    color: var(--accent);
+
+    border-color: var(--accent);
+
+    transform: translateY(-2px);
 }
 
 
@@ -307,7 +397,7 @@ img[onclick]:focus-visible {
 
 .primary-btn {
     background: var(--accent);
-    color: #06101c;
+    color: var(--on-accent);
 }
 
 .primary-btn:hover {
@@ -915,7 +1005,7 @@ img[onclick]:focus-visible {
 .back-to-top:hover {
     background: var(--accent);
 
-    color: #06101c;
+    color: var(--on-accent);
 }
 
 
@@ -1265,7 +1355,7 @@ img[onclick]:focus-visible {
 .cert-display {
     position: relative;
 
-    background: rgba(255, 255, 255, 0.025);
+    background: var(--glass-panel);
 
     border: 1px solid var(--border);
 
@@ -1445,7 +1535,7 @@ img[onclick]:focus-visible {
 .view-certificate:hover {
     background: var(--accent);
 
-    color: #06101c;
+    color: var(--on-accent);
 
     transform: translateY(-2px);
 }
@@ -1666,7 +1756,7 @@ img[onclick]:focus-visible {
 
     background: var(--accent);
 
-    color: #06101c;
+    color: var(--on-accent);
 
     font-size: 9px;
 
@@ -1723,7 +1813,7 @@ img[onclick]:focus-visible {
 
     text-align: left;
 
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--glass-row);
 
     border: 1px solid var(--border);
 
@@ -2076,7 +2166,7 @@ img[onclick]:focus-visible {
 .gallery-next:hover {
     background: var(--accent);
     border-color: var(--accent);
-    color: #06101c;
+    color: var(--on-accent);
 }
 
 .gallery-prev {

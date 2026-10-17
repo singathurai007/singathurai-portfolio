@@ -51,6 +51,62 @@ navLinks.forEach(link => {
 
 
 /* =====================
+   THEME TOGGLE (dark / light)
+   ===================== */
+
+const themeToggle = document.getElementById("theme-toggle");
+const themeIcon = themeToggle.querySelector("i");
+
+function setTheme(theme) {
+
+    document.documentElement.setAttribute("data-theme", theme);
+
+    const isLight = theme === "light";
+
+    themeIcon.classList.toggle("fa-moon", !isLight);
+    themeIcon.classList.toggle("fa-sun", isLight);
+
+    themeToggle.setAttribute("aria-pressed", String(isLight));
+
+    themeToggle.setAttribute(
+        "aria-label",
+        isLight ? "Switch to dark theme" : "Switch to light theme"
+    );
+
+    try {
+        localStorage.setItem("theme", theme);
+    } catch (error) {
+        /* localStorage unavailable - ignore */
+    }
+
+}
+
+/* Apply the saved theme on load */
+
+let savedTheme = "dark";
+
+try {
+    savedTheme = localStorage.getItem("theme") || "dark";
+} catch (error) {
+    /* localStorage unavailable - keep the default theme */
+}
+
+setTheme(savedTheme);
+
+themeToggle.addEventListener("click", () => {
+
+    const current =
+        document.documentElement.getAttribute("data-theme") === "light"
+            ? "light"
+            : "dark";
+
+    setTheme(current === "light" ? "dark" : "light");
+
+});
+
+
+
+/* =====================
    ACTIVE NAVIGATION
    ===================== */
 
