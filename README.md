@@ -2,7 +2,7 @@
 
 Personal portfolio of **Singathurai C**, a Software · Cloud · DevOps Engineer.
 
-**Live:** https://singathurai007.github.io/singathurai-portfolio/
+**Live:** https://singathurai-portfolio.onrender.com/
 
 ## About
 
@@ -62,8 +62,11 @@ python -m http.server 8000
 
 ## Deployment
 
-Every push to `main` triggers the **Deploy Portfolio to GitHub Pages** workflow,
-which publishes the site to GitHub Pages.
+The site is a static bundle with no build step, so it can be hosted anywhere.
+
+- **Primary host:** https://singathurai-portfolio.onrender.com/
+- Every push to `main` also triggers the **Deploy Portfolio to GitHub Pages** workflow,
+  which publishes a mirror to GitHub Pages.
 
 ## Contact
 
