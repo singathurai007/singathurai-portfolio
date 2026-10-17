@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Singathurai | DevOps Engineer</title>
-     <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Singathurai C | Software · Cloud · DevOps Engineer</title>
+
     <meta name="description"
-          content="Singathurai - DevOps Engineer and Software Developer Portfolio">
-    
-    <!-- Website Logo / Favicon -->
-<link rel="icon" type="image/png" href="c:\Users\ELCOT\Downloads\logo.png">      
+          content="Singathurai C - Software, Cloud and DevOps Engineer building automated CI/CD pipelines, AWS infrastructure as code, containerized applications and monitoring solutions.">
+
+    <meta name="author" content="Singathurai C">
+    <meta name="theme-color" content="#0a0f1c">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Singathurai C | Software · Cloud · DevOps Engineer">
+    <meta property="og:description"
+          content="Software, Cloud and DevOps Engineer building automated CI/CD pipelines, AWS infrastructure as code, containerized applications and monitoring solutions.">
+    <meta property="og:image" content="images/profile.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Singathurai C | Software · Cloud · DevOps Engineer">
+    <meta name="twitter:description"
+          content="Software, Cloud and DevOps Engineer portfolio.">
+    <meta name="twitter:image" content="images/profile.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,31 +43,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<!-- IMAGE GALLERY -->
 
-<div id="imageGallery" class="image-gallery">
-
-    <button class="gallery-close" onclick="closeGallery()">
-        &times;
-    </button>
-
-    <button class="gallery-prev" onclick="previousImage()">
-        &#10094;
-    </button>
-
-    <img id="galleryImage"
-         src=""
-         alt="Project Screenshot">
-
-    <button class="gallery-next" onclick="nextImage()">
-        &#10095;
-    </button>
-
-    <div id="galleryCounter" class="gallery-counter">
-        1 / 4
-    </div>
-
-</div>
 <body>
 
 <!-- ================= NAVBAR ================= -->
@@ -63,7 +56,11 @@
             Singathurai<span>.</span>
         </a>
 
-        <button class="menu-toggle" id="menu-toggle">
+        <button class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-menu">
             <i class="fas fa-bars"></i>
         </button>
 
@@ -516,8 +513,12 @@
     <div class="project-image">
 
        <img src="images/projects/devsecops/devsecops-1.png"
-     alt="DevSecOps GitOps Project"
-             onclick="openGallery(0)">
+            alt="DevSecOps GitOps pipeline dashboard"
+            loading="lazy"
+            tabindex="0"
+            role="button"
+            aria-label="Open DevSecOps pipeline screenshots"
+            onclick="openGallery('devsecops', 0)">
 
     </div>
 
@@ -558,7 +559,12 @@
             <div class="project-image">
 
              <img src="images/projects/terraform-jenkins/terraform-jenkins-1.png"
-     alt="Terraform and Ansible AWS Project">
+                  alt="Terraform and Jenkins AWS EC2 provisioning"
+                  loading="lazy"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Open Terraform and Jenkins screenshots"
+                  onclick="openGallery('terraform-jenkins', 0)">
             </div>
 
 
@@ -605,7 +611,12 @@
             <div class="project-image">
 
             <img src="images/projects/monitoring/monitoring-1.png"
-     alt="Prometheus Grafana Monitoring Project">
+                 alt="Prometheus and Grafana monitoring dashboard"
+                 loading="lazy"
+                 tabindex="0"
+                 role="button"
+                 aria-label="Open Prometheus and Grafana screenshots"
+                 onclick="openGallery('monitoring', 0)">
 
             </div>
 
@@ -654,7 +665,12 @@
             <div class="project-image">
 
                 <img src="images/projects/github-actions/github-actions-1.png"
-     alt="GitHub Actions CI/CD Project">
+                     alt="GitHub Actions deployment to AWS EC2"
+                     loading="lazy"
+                     tabindex="0"
+                     role="button"
+                     aria-label="Open GitHub Actions screenshots"
+                     onclick="openGallery('github-actions', 0)">
 
             </div>
 
@@ -1202,9 +1218,47 @@
 </button>
 
 
+<!-- ================= IMAGE GALLERY ================= -->
+
+<div id="imageGallery"
+     class="image-gallery"
+     role="dialog"
+     aria-modal="true"
+     aria-hidden="true"
+     aria-label="Project image gallery">
+
+    <button class="gallery-close"
+            onclick="closeGallery()"
+            aria-label="Close gallery">
+        &times;
+    </button>
+
+    <button class="gallery-prev"
+            onclick="previousImage()"
+            aria-label="Previous image">
+        &#10094;
+    </button>
+
+    <img id="galleryImage"
+         src=""
+         alt="Project screenshot">
+
+    <button class="gallery-next"
+            onclick="nextImage()"
+            aria-label="Next image">
+        &#10095;
+    </button>
+
+    <div id="galleryCounter" class="gallery-counter">
+        1 / 1
+    </div>
+
+</div>
+
+
 <!-- JavaScript -->
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 
 </body>
 </html>

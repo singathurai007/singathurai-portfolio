@@ -14,23 +14,21 @@ const navLinks = document.querySelectorAll(".nav-link");
 
 
 // Open / Close mobile menu
-menuToggle.addEventListener("click", () => {
+function setMenu(open) {
 
-    navMenu.classList.toggle("open");
+    navMenu.classList.toggle("open", open);
+    menuToggle.setAttribute("aria-expanded", String(open));
 
     const icon = menuToggle.querySelector("i");
 
-    if (navMenu.classList.contains("open")) {
+    icon.classList.toggle("fa-bars", !open);
+    icon.classList.toggle("fa-xmark", open);
 
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-xmark");
+}
 
-    } else {
+menuToggle.addEventListener("click", () => {
 
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
-
-    }
+    setMenu(!navMenu.classList.contains("open"));
 
 });
 
@@ -44,12 +42,7 @@ navLinks.forEach(link => {
 
     link.addEventListener("click", () => {
 
-        navMenu.classList.remove("open");
-
-        const icon = menuToggle.querySelector("i");
-
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
+        setMenu(false);
 
     });
 
@@ -180,59 +173,137 @@ animatedElements.forEach(element => {
     observer.observe(element);
 
 });
-const projectImages = [
-    "images/devsecops-1.png",
-    "images/devsecops-2.png",
-    "images/devsecops-3.png",
-    "images/devsecops-4.png"
-];
+/* =====================
+   PROJECT IMAGE GALLERY
+   ===================== */
 
-let currentImage = 0;
+const galleries = {
 
-function openGallery(index) {
+    devsecops: [
+        "images/projects/devsecops/devsecops-1.png",
+        "images/projects/devsecops/devsecops-2.png",
+        "images/projects/devsecops/devsecops-3.png",
+        "images/projects/devsecops/devsecops-4.png"
+    ],
 
-    currentImage = index;
+    "terraform-jenkins": [
+        "images/projects/terraform-jenkins/terraform-jenkins-1.png",
+        "images/projects/terraform-jenkins/terraform-jenkins-2.png"
+    ],
 
-    document.getElementById("imageGallery").style.display = "flex";
+    monitoring: [
+        "images/projects/monitoring/monitoring-1.png",
+        "images/projects/monitoring/monitoring-2.png"
+    ],
+
+    "github-actions": [
+        "images/projects/github-actions/github-actions-1.png",
+        "images/projects/github-actions/github-actions-2.png"
+    ]
+
+};
+
+const galleryEl = document.getElementById("imageGallery");
+const galleryImage = document.getElementById("galleryImage");
+const galleryCounter = document.getElementById("galleryCounter");
+
+let currentImages = [];
+let currentIndex = 0;
+
+function openGallery(name, index = 0) {
+
+    currentImages = galleries[name] || [];
+
+    if (!currentImages.length) {
+        return;
+    }
+
+    currentIndex = index;
+
+    galleryEl.classList.add("open");
+    galleryEl.setAttribute("aria-hidden", "false");
+
+    document.body.style.overflow = "hidden";
 
     showGalleryImage();
 }
 
 function showGalleryImage() {
 
-    document.getElementById("galleryImage").src =
-        projectImages[currentImage];
+    galleryImage.src = currentImages[currentIndex];
+    galleryImage.alt = "Project screenshot " + (currentIndex + 1);
 
-    document.getElementById("galleryCounter").textContent =
-        (currentImage + 1) + " / " + projectImages.length;
+    galleryCounter.textContent =
+        (currentIndex + 1) + " / " + currentImages.length;
 }
 
 function nextImage() {
 
-    currentImage++;
-
-    if (currentImage >= projectImages.length) {
-        currentImage = 0;
+    if (!currentImages.length) {
+        return;
     }
+
+    currentIndex = (currentIndex + 1) % currentImages.length;
 
     showGalleryImage();
 }
 
 function previousImage() {
 
-    currentImage--;
-
-    if (currentImage < 0) {
-        currentImage = projectImages.length - 1;
+    if (!currentImages.length) {
+        return;
     }
+
+    currentIndex =
+        (currentIndex - 1 + currentImages.length) % currentImages.length;
 
     showGalleryImage();
 }
 
 function closeGallery() {
 
-    document.getElementById("imageGallery").style.display = "none";
+    galleryEl.classList.remove("open");
+    galleryEl.setAttribute("aria-hidden", "true");
+
+    document.body.style.overflow = "";
 }
+
+
+/* Keyboard controls */
+
+document.addEventListener("keydown", (event) => {
+
+    if (!galleryEl.classList.contains("open")) {
+        return;
+    }
+
+    if (event.key === "Escape") {
+        closeGallery();
+    } else if (event.key === "ArrowRight") {
+        nextImage();
+    } else if (event.key === "ArrowLeft") {
+        previousImage();
+    }
+
+});
+
+
+/* Keyboard activation for clickable project images */
+
+document.querySelectorAll(".project-image img").forEach(img => {
+
+    img.addEventListener("keydown", (event) => {
+
+        if (event.key === "Enter" || event.key === " ") {
+
+            event.preventDefault();
+            img.click();
+
+        }
+
+    });
+
+});
 /* =====================================================
    CERTIFICATE GALLERY
    ===================================================== */
@@ -362,7 +433,7 @@ certificateThumbs.forEach((thumb, index) => {
             String(index + 1).padStart(2, "0");
 
         certNumber.textContent =
-            `${number} / 05`;
+            `${number} / ${String(certificateThumbs.length).padStart(2, "0")}`;
 
     });
 
