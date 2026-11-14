@@ -90,6 +90,45 @@ html {
   overflow-x: hidden;
 }
 
+
+/* =====================
+   LIGHT THEME
+   ===================== */
+
+[data-theme="light"] {
+    --bg-primary: #f7f9fc;
+    --bg-secondary: #eaeff6;
+    --bg-card: #ffffff;
+
+    --text-primary: #0f172a;
+    --text-secondary: #52627a;
+
+    --accent: #0284c7;
+    --accent-dark: #0369a1;
+
+    --border: #d7dfea;
+
+    --header-bg: rgba(255, 255, 255, 0.88);
+    --on-accent: #ffffff;
+
+    --glass-panel: rgba(15, 23, 42, 0.02);
+    --glass-row: rgba(15, 23, 42, 0.02);
+}
+
+[data-theme="light"] .primary-btn:hover {
+    background: var(--accent-dark);
+    color: var(--on-accent);
+}
+
+[data-theme="light"] .cert-details {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 23, 42, 0.03),
+            rgba(15, 23, 42, 0.01)
+        );
+}
+
 body {
   min-height: 100vh;
   background-color: var(--bg-dark);
