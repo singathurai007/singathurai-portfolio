@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SINGATHURAI C — Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    @page {
+      size: A4;
+      margin: 10mm 13mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 9.2pt;
+      line-height: 1.34;
+      color: #1e293b;
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .resume-container {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    /* HEADER */
+    .header {
+      text-align: center;
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid #0f172a;
+    }
+
+    .name {
+      font-size: 19pt;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      color: #0f172a;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .contact-line {
+      font-size: 8.8pt;
+      color: #334155;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 3px;
+    }
+
+    .contact-line a {
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* SECTION */
+    .section {
+      margin-bottom: 7px;
+    }
+
+    .section-title {
+      font-size: 9.8pt;
+      font-weight: 700;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 2px;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    /* SUMMARY */
+    .summary-text {
+      font-size: 8.8pt;
+      color: #334155;
+      text-align: justify;
+      line-height: 1.35;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5px;
+      font-size: 8.8pt;
+    }
+
+    .skill-row {
+      display: flex;
+      line-height: 1.3;
+    }
+
+    .skill-category {
+      font-weight: 700;
+      color: #0f172a;
+      width: 148px;
+      flex-shrink: 0;
+    }
+
+    .skill-items {
+      color: #334155;
+      flex: 1;
+    }
+
+    /* EXPERIENCE & PROJECTS */
+    .entry {
+      margin-bottom: 6px;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1.5px;
+    }
+
+    .entry-title {
+      font-size: 9.2pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .entry-subtitle {
+      font-size: 8.8pt;
+      font-weight: 600;
+      color: #0369a1;
+    }
+
+    .entry-date {
+      font-size: 8.4pt;
+      font-weight: 600;
+      color: #475569;
+    }
+
+    .bullets {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .bullets li {
+      position: relative;
+      padding-left: 12px;
+      font-size: 8.7pt;
+      color: #334155;
+      margin-bottom: 2px;
+      line-height: 1.3;
+      text-align: justify;
+    }
+
+    .bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 1px;
+      color: #0284c7;
+      font-weight: bold;
+    }
+
+    /* EDUCATION */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 8.8pt;
+      margin-bottom: 2px;
+    }
+
+    .edu-main {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .edu-meta {
+      color: #475569;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+<div class="resume-container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1 class="name">SINGATHURAI C</h1>
+    <div class="contact-line">
+      <span>Gandhipuram, Coimbatore, Tamil Nadu, India</span>
+      <span>•</span>
+      <span><strong>+91 8778457577</strong></span>
+      <span>•</span>
+      <a href="mailto:cmsingathurai@gmail.com">cmsingathurai@gmail.com</a>
+    </div>
+    <div class="contact-line">
+      <span>LinkedIn: <a href="https://linkedin.com/in/singathuraic" target="_blank">linkedin.com/in/singathuraic</a></span>
+      <span>•</span>
+      <span>GitHub: <a href="https://github.com/singathurai007" target="_blank">github.com/singathurai007</a></span>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="section">
+    <div class="section-title">Professional Summary</div>
+    <p class="summary-text">
+      2026 B.Tech Information Technology graduate and Backend Development Intern with hands-on experience building scalable server-side services (NestJS, TypeScript, Prisma ORM, PostgreSQL) and automating cloud-native deployments (AWS, Docker, DevSecOps CI/CD). Strong foundation in REST API architecture, multi-role authentication (RBAC, JWT, OAuth 2.0), relational database design, and infrastructure automation, seeking to contribute to enterprise IT and software engineering teams.
+    </p>
+  </div>
+
+  <!-- TECHNICAL SKILLS -->
+  <div class="section">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-category">Backend & Languages:</span>
+        <span class="skill-items">TypeScript, JavaScript (ES6+), Node.js, NestJS, REST APIs, Google OAuth 2.0, JWT, Python, Bash</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">Databases & ORM:</span>
+        <span class="skill-items">PostgreSQL, Prisma ORM, MySQL, Relational Schema Design, Query Optimization, SQL</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">Cloud & Containers:</span>
+        <span class="skill-items">AWS (EC2, IAM, Security Groups, CloudWatch, SNS, S3, VPC), Docker, Docker Compose, Linux (Ubuntu)</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">DevSecOps & Tools:</span>
+        <span class="skill-items">Jenkins, GitHub Actions, Terraform, Ansible, Prometheus, Grafana, SonarQube, Trivy, Git, Postman</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <span class="entry-title">Backend Development Intern</span>
+          <span class="entry-subtitle"> — Bloogle (Live Project: tvrepaircoimbatore.in)</span>
+        </div>
+        <span class="entry-date">Oct 2026 – Present</span>
+      </div>
+      <ul class="bullets">
+        <li>Built robust REST APIs using NestJS, TypeScript, Prisma ORM, and PostgreSQL to capture, validate, and store customer service leads in a live production environment.</li>
+        <li>Implemented Role-Based Access Control (RBAC) and secure authentication supporting Google OAuth 2.0 and JWT login for Shop Owners and Admin dashboards.</li>
+        <li>Engineered an Admin approval workflow and dynamic query filtering to match verified shop owners with leads based on location and service category, designing the schema for subscription-based lead access.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <div class="section-title">Key Projects</div>
+
+    <!-- DevSecOps Pipeline -->
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <span class="entry-title">DevSecOps CI/CD Pipeline</span>
+          <span class="entry-subtitle"> | Jenkins, GitHub, Docker, SonarQube, Trivy, AWS EC2</span>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li>Designed and automated an end-to-end DevSecOps pipeline using Jenkins triggered via GitHub Webhooks, streamlining automated build, security testing, and deployment.</li>
+        <li>Enforced continuous code quality gates by integrating SonarQube static code analysis and Trivy Docker container image vulnerability scanning, halting builds with high/critical CVEs.</li>
+        <li>Built multi-stage Docker images and automated containerized deployments onto AWS EC2 instances.</li>
+      </ul>
+    </div>
+
+    <!-- AWS IaC Terraform & Ansible -->
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <span class="entry-title">AWS Infrastructure Automation using Terraform & Ansible</span>
+          <span class="entry-subtitle"> | AWS, Terraform, Ansible, Linux</span>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li>Provisioned modular AWS infrastructure (EC2, IAM roles, Security Groups) as code using Terraform with remote state management for safe, repeatable deployments.</li>
+        <li>Automated server configuration and web server deployment using modular Ansible Playbooks across Dev, QA, and Production environments without configuration drift.</li>
+      </ul>
+    </div>
+
+    <!-- EC2 Monitoring -->
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <span class="entry-title">AWS EC2 Infrastructure Monitoring Platform</span>
+          <span class="entry-subtitle"> | Prometheus, Node Exporter, Grafana, Docker</span>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li>Built a containerized observability stack using Docker Compose, Prometheus, Node Exporter, and Grafana to monitor CPU, memory, traffic, and error metrics in real time.</li>
+        <li>Configured proactive threshold alerts (80% resource saturation) integrated with Alertmanager and AWS SNS/CloudWatch for automated incident notifications.</li>
+      </ul>
+    </div>
+
+    <!-- Automobile Repair Management System -->
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <span class="entry-title">Automobile Repair Management System</span>
+          <span class="entry-subtitle"> | HTML5, CSS3, JavaScript, MySQL, Apache</span>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li>Developed an Automobile Repair Management System with service booking, repair job tracking, customer management, and status updates through an intuitive user interface.</li>
+        <li>Designed responsive web interfaces and integrated database operations to ensure efficient data storage and retrieval.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="edu-row">
+      <span class="edu-main">Kumaraguru College of Technology, Coimbatore</span>
+      <span class="edu-meta">2022 – 2026</span>
+    </div>
+    <div class="edu-row" style="margin-bottom: 4px;">
+      <span class="edu-meta">B.Tech in Information Technology • <strong>CGPA: 7.11 (71.1%)</strong></span>
+      <span class="edu-meta">Coimbatore, India</span>
+    </div>
+
+    <div class="edu-row">
+      <span class="edu-main">St. Corporation Hr Sec School, Coimbatore</span>
+      <span class="edu-meta">Higher Secondary (Class XII) • <strong>91%</strong></span>
+    </div>
+
+    <div class="edu-row">
+      <span class="edu-main">St. Arulanandhar Hr Sec School, Ramanathapuram</span>
+      <span class="edu-meta">Secondary School (Class X) • <strong>89%</strong></span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
+

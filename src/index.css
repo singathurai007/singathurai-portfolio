@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Deep Obsidian, Royal Purple & Electric Violet AI/Cloud Theme */
+    --bg-page: #090710;
+    --bg-surface: #120F1D;
+    --bg-surface-subtle: #171324;
+    --bg-surface-hover: #1D182E;
+    --border-subtle: #261E3F;
+    --border-medium: #3E3166;
+    --border-glow: #8B5CF6;
+    --text-heading: #FAFAFA;
+    --text-body: #CBD5E1;
+    --text-muted: #94A3B8;
+    --accent: #8B5CF6;
+    --accent-hover: #7C3AED;
+    --accent-glow: rgba(139, 92, 246, 0.16);
+    --accent-subtle: rgba(139, 92, 246, 0.15);
+    --accent-subtle-text: #C4B5FD;
+    --accent-border: #261E3F;
+    --status-live: #10B981;
+    --primary: var(--accent);
+    --primary-hover: var(--accent-hover);
+    --card-bg: #120F1D;
+    --card-border: #261E3F;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #090710;
+    color: #CBD5E1;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.65;
+  }
+
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Outfit', 'DM Sans', sans-serif;
+    color: #FAFAFA;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  /* Executive high-trust typography for Tamil headings and body */
+  html[lang="ta"] body {
+    font-family: 'Hind Madurai', 'DM Sans', system-ui, sans-serif;
+    line-height: 1.75;
+    letter-spacing: 0.015em;
+  }
+
+  html[lang="ta"] h1,
+  html[lang="ta"] h2,
+  html[lang="ta"] h3,
+  html[lang="ta"] h4,
+  html[lang="ta"] h5,
+  html[lang="ta"] .font-heading {
+    font-family: 'Catamaran', 'Outfit', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  body {
+    background-color: #090710;
+    color: #CBD5E1;
+    overflow-x: hidden;
+    line-height: 1.65;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background-color: rgba(139, 92, 246, 0.3);
+    color: #FAFAFA;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #090710;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #261E3F;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8B5CF6;
+  }
+}
+
+/* Subtle, violet-tinted dot-grid overlay */
+.bg-grid-overlay {
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(139, 92, 246, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.85) 20%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.85) 20%, transparent 85%);
+}
+
+/* Low-opacity radial purple ambient glow */
+.ambient-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.glow-orb-1 {
+  position: absolute;
+  top: -10%;
+  left: 20%;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.14;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.8) 0%, rgba(109, 40, 217, 0.4) 50%, transparent 70%);
+}
+
+.glow-orb-2 {
+  position: absolute;
+  top: 45%;
+  right: -5%;
+  width: 45vw;
+  height: 45vw;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.1;
+  background: radial-gradient(circle, rgba(109, 40, 217, 0.7) 0%, transparent 70%);
+}
+
+.glow-orb-3 {
+  position: absolute;
+  bottom: -5%;
+  left: -5%;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.12;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.6) 0%, transparent 70%);
+}
+
+/* Deep Obsidian & Electric Violet Elevated Bento Card Utility */
+.bento-card {
+  background-color: #120F1D;
+  border: 1px solid #261E3F;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover {
+  border-color: #8B5CF6;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.16);
+}

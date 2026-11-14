@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <!-- Primary Meta Tags -->
+  <title>SINGATHURAI C — Backend Developer & DevOps Engineer</title>
+  <meta name="title" content="SINGATHURAI C — Backend Developer & DevOps Engineer" />
+  <meta name="description" content="Portfolio of Singathurai C — B.Tech IT Graduate & Backend Development Intern at Bloogle. Specialized in NestJS, TypeScript, Prisma, PostgreSQL, AWS, Docker, and DevSecOps CI/CD." />
+  <meta name="author" content="Singathurai C" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+
+  <!-- Google Fonts: Inter, Manrope, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6.5.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Ambient Glow & Canvas Background -->
+  <div class="ambient-glow">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+  </div>
+  <div class="bg-grid-overlay"></div>
+  <canvas id="ambientCanvas" style="position: fixed; inset: 0; pointer-events: none; z-index: 0;"></canvas>
+
+  <!-- ================= FLOATING PILL NAVBAR ================= -->
+  <div class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="nav-brand">
+        <span class="brand-dot"></span>
+        SINGATHURAI C
+        <span class="brand-badge">Backend & DevOps</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Work</a></li>
+        <li><a href="#certifications" class="nav-link">Credentials</a></li>
+        <li><a href="#journey" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Quick Search / Command Palette Trigger -->
+        <button class="btn-cmd-palette" id="cmdPaletteBtn" title="Search or jump to section (Ctrl + K)">
+          <i class="fas fa-search"></i>
+          <span>Search</span>
+          <kbd>Ctrl K</kbd>
+        </button>
+
+        <!-- Accent Theme Switcher -->
+        <div class="theme-picker" title="Switch Accent Theme">
+          <span class="theme-dot dot-gold" data-theme="gold" title="Amber Gold"></span>
+          <span class="theme-dot dot-emerald" data-theme="emerald" title="Cyber Emerald"></span>
+          <span class="theme-dot dot-blue" data-theme="blue" title="Electric Blue"></span>
+          <span class="theme-dot dot-violet" data-theme="violet" title="Neon Violet"></span>
+        </div>
+
+        <!-- Single Page Resume Download -->
+        <a href="resume.pdf" target="_blank" class="btn-nav-resume" title="Download Official Single-Page PDF Resume">
+          <i class="fas fa-file-arrow-down"></i>
+          <span>Resume PDF</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="btn-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <button class="mobile-drawer-close" id="mobileClose" aria-label="Close menu">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#experience" class="mobile-nav-link">Work Experience</a></li>
+      <li><a href="#services" class="mobile-nav-link">Services</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Technical Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects Showcase</a></li>
+      <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+      <li><a href="#journey" class="mobile-nav-link">Education & Journey</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <a href="resume.pdf" target="_blank" class="btn-primary" style="margin-top: 1rem;">
+      <i class="fas fa-file-arrow-down"></i> Download Resume (PDF)
+    </a>
+  </div>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- Left Content -->
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <span class="status-badge">
+              <span class="pulse-dot"></span>
+              Backend Development Intern @ Bloogle • Open to Full-Time Roles
+            </span>
+          </div>
+
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">SINGATHURAI C</h1>
+
+          <div class="hero-roles">
+            <span class="role-item">Backend Developer</span>
+            <span class="role-divider">•</span>
+            <span class="role-item">DevOps Engineer</span>
+            <span class="role-divider">•</span>
+            <span class="role-item">Cloud & API Architect</span>
+          </div>
+
+          <p class="hero-description">
+            2026 B.Tech Information Technology graduate from <strong>Kumaraguru College of Technology</strong> and Backend Development Intern with hands-on experience building scalable server-side services (NestJS, TypeScript, Prisma ORM, PostgreSQL) and automating cloud-native deployments (AWS, Docker, DevSecOps CI/CD).
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn-primary">
+              <span>View Projects</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="resume.pdf" target="_blank" class="btn-secondary">
+              <i class="fas fa-download"></i>
+              <span>Download Resume (PDF)</span>
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-socials">
+            <a href="https://github.com/singathurai007" target="_blank" class="social-pill" aria-label="GitHub" title="GitHub: github.com/singathurai007">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/singathuraic" target="_blank" class="social-pill" aria-label="LinkedIn" title="LinkedIn: linkedin.com/in/singathuraic">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:cmsingathurai@gmail.com" class="social-pill" aria-label="Email" title="Email: cmsingathurai@gmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/918778457577" target="_blank" class="social-pill" aria-label="WhatsApp" title="WhatsApp: +91 8778457577">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+
+          <!-- DevOps Live System Health Indicator -->
+          <div class="system-health-banner">
+            <div class="health-item">
+              <span class="health-indicator"></span>
+              <span>Location: <strong>Gandhipuram, Coimbatore</strong></span>
+            </div>
+            <div class="health-item">
+              <span class="health-indicator"></span>
+              <span>Stack: <strong>NestJS • PostgreSQL • AWS</strong></span>
+            </div>
+            <div class="health-item">
+              <span class="health-indicator"></span>
+              <span>Pipeline: <strong>GitOps CI/CD Passed</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Avatar / Visual Showcase -->
+        <div class="hero-visual-wrap">
+          <div class="avatar-ambient-frame">
+            <div class="avatar-card">
+              <div class="avatar-img-wrap">
+                <img src="images/profile.jpg" alt="Singathurai C" />
+              </div>
+
+              <!-- Floating Tech Badges -->
+              <div class="floating-chip chip-aws">
+                <i class="fab fa-node-js"></i>
+                <span>NestJS & TS</span>
+              </div>
+              <div class="floating-chip chip-k8s">
+                <i class="fab fa-aws"></i>
+                <span>AWS & Docker</span>
+              </div>
+              <div class="floating-chip chip-cicd">
+                <i class="fas fa-database"></i>
+                <span>PostgreSQL & Prisma</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INFINITE TECH TICKER ================= -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <div class="marquee-item"><i class="fab fa-node-js"></i> NestJS & Node.js</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-code"></i> TypeScript</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-database"></i> PostgreSQL & Prisma ORM</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fab fa-aws"></i> AWS Cloud (EC2, IAM, SNS)</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fab fa-docker"></i> Docker & Compose</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-shield-halved"></i> DevSecOps CI/CD</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-layer-group"></i> Terraform IaC</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-network-wired"></i> Ansible Automation</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-chart-line"></i> Prometheus & Grafana</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-shield-check"></i> SonarQube & Trivy</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fab fa-linux"></i> Linux Administration</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-key"></i> Google OAuth 2.0 & JWT</div>
+      <div class="marquee-dot"></div>
+      <!-- Duplicate items for seamless continuous looping -->
+      <div class="marquee-item"><i class="fab fa-node-js"></i> NestJS & Node.js</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-code"></i> TypeScript</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-database"></i> PostgreSQL & Prisma ORM</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fab fa-aws"></i> AWS Cloud (EC2, IAM, SNS)</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fab fa-docker"></i> Docker & Compose</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-shield-halved"></i> DevSecOps CI/CD</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-layer-group"></i> Terraform IaC</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-network-wired"></i> Ansible Automation</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-chart-line"></i> Prometheus & Grafana</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-shield-check"></i> SonarQube & Trivy</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fab fa-linux"></i> Linux Administration</div>
+      <div class="marquee-dot"></div>
+      <div class="marquee-item"><i class="fas fa-key"></i> Google OAuth 2.0 & JWT</div>
+      <div class="marquee-dot"></div>
+    </div>
+  </div>
+
+  <!-- ================= KEY STATS COUNTER BENTO ================= -->
+  <section class="container" style="margin-top: 4rem;">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number" data-target="7.32" data-suffix=" CGPA">0<span> CGPA</span></div>
+        <div class="stat-label">B.Tech IT (Kumaraguru)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-target="1" data-suffix=" Live App">0<span> Live App</span></div>
+        <div class="stat-label">tvrepaircoimbatore.in</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-target="6" data-suffix="+">0<span>+</span></div>
+        <div class="stat-label">Production Projects & Stacks</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-target="6" data-suffix="+">0<span>+</span></div>
+        <div class="stat-label">Verified Certifications</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ME BENTO ================= -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><i class="fas fa-fingerprint"></i> PROFESSIONAL SUMMARY</span>
+        <h2 class="section-title">Backend Architecture & <span>Cloud Automation.</span></h2>
+        <p class="section-subtitle">Bridging scalable server-side development with automated infrastructure deployment.</p>
+      </div>
+
+      <div class="about-bento-grid">
+        <!-- Main Bio Card -->
+        <div class="bento-card bento-card-main">
+          <h3>Singathurai C — Backend Developer & DevOps Engineer</h3>
+          <p>
+            2026 B.Tech Information Technology graduate from <strong>Kumaraguru College of Technology, Coimbatore</strong> (CGPA: 7.32) and Backend Development Intern with hands-on experience building scalable server-side services (NestJS, TypeScript, Prisma ORM, PostgreSQL) and automating cloud-native deployments (AWS, Docker, DevSecOps CI/CD).
+          </p>
+          <p>
+            Strong foundation in REST API architecture, multi-role authentication (RBAC, JWT, Google OAuth 2.0), relational database design, query optimization, and infrastructure automation, seeking to contribute to enterprise IT and software engineering teams.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-server"></i>
+              <div>
+                <strong>Backend & APIs</strong>
+                <span>NestJS, TypeScript, Node.js, REST, OAuth 2.0, JWT</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-database"></i>
+              <div>
+                <strong>Databases & ORM</strong>
+                <span>PostgreSQL, Prisma ORM, MySQL, Relational Schema</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fab fa-aws"></i>
+              <div>
+                <strong>Cloud & Containers</strong>
+                <span>AWS (EC2, IAM, Security Groups), Docker, Linux</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-shield-halved"></i>
+              <div>
+                <strong>DevSecOps & IaC</strong>
+                <span>Jenkins, GitHub Actions, Terraform, Ansible, SonarQube</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Card: Fast Facts -->
+        <div class="bento-card bento-card-side">
+          <div class="side-fact-list">
+            <div class="fact-item">
+              <div class="fact-label">Current Role</div>
+              <div class="fact-value">Backend Development Intern at <strong>Bloogle</strong></div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-label">Live Production Project</div>
+              <div class="fact-value"><a href="https://tvrepaircoimbatore.in" target="_blank">tvrepaircoimbatore.in <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i></a></div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-label">Education & College</div>
+              <div class="fact-value">B.Tech IT — Kumaraguru College of Technology (2022–2026)</div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-label">Location</div>
+              <div class="fact-value">Gandhipuram, Coimbatore, Tamil Nadu, India</div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-label">Direct Communication</div>
+              <div class="fact-value">
+                <a href="mailto:cmsingathurai@gmail.com">cmsingathurai@gmail.com</a> • <a href="tel:+918778457577">+91 8778457577</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="resume.pdf" target="_blank" class="btn-primary" style="margin-top: 1.5rem; justify-content: center;">
+            <i class="fas fa-file-pdf"></i>
+            <span>Download Resume PDF</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ================= INTERACTIVE DEVOPS TERMINAL WIDGET ================= -->
+      <div class="terminal-wrapper" id="devopsTerminal">
+        <div class="terminal-box">
+          <div class="terminal-topbar">
+            <div class="terminal-dots">
+              <span class="t-dot dot-red"></span>
+              <span class="t-dot dot-yellow"></span>
+              <span class="t-dot dot-green"></span>
+            </div>
+            <span class="terminal-title">bash — singathurai@bloogle-backend: ~</span>
+            <span class="terminal-badge"><i class="fas fa-circle-check"></i> LIVE CLI</span>
+          </div>
+
+          <div class="terminal-body" id="terminalHistory">
+            <div class="term-line-output">Welcome to Singathurai's Backend & DevOps Terminal.</div>
+            <div class="term-line-output">Type <span class="term-line-highlight">'help'</span> or click the command pills below to explore my credentials.</div>
+          </div>
+
+          <div class="terminal-body" style="padding-top: 0; min-height: auto;">
+            <div class="terminal-prompt-row">
+              <span class="term-prompt-label">singathurai@cloud:~$</span>
+              <input type="text" id="terminalInput" class="terminal-input" placeholder="Type a command (e.g. experience, skills, projects, certs, whoami)..." autocomplete="off" spellcheck="false" />
+            </div>
+          </div>
+
+          <div class="terminal-quick-cmds">
+            <span>Quick Commands:</span>
+            <button class="cmd-pill" data-cmd="experience">experience</button>
+            <button class="cmd-pill" data-cmd="skills">skills</button>
+            <button class="cmd-pill" data-cmd="projects">projects</button>
+            <button class="cmd-pill" data-cmd="certs">certs</button>
+            <button class="cmd-pill" data-cmd="education">education</button>
+            <button class="cmd-pill" data-cmd="cat resume.txt">cat resume.txt</button>
+            <button class="cmd-pill" data-cmd="sudo hire">sudo hire</button>
+            <button class="cmd-pill" data-cmd="clear">clear</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= WORK EXPERIENCE SECTION ================= -->
+  <section class="section experience-section" id="experience" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><i class="fas fa-briefcase"></i> INDUSTRY EXPERIENCE</span>
+        <h2 class="section-title">Production <span>Experience.</span></h2>
+        <p class="section-subtitle">Real-world commercial backend development and lead management architectures.</p>
+      </div>
+
+      <div class="bento-card" style="border-left: 4px solid var(--accent);">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #ffffff; margin-bottom: 0.35rem;">Backend Development Intern</h3>
+            <div style="font-size: 1.05rem; font-weight: 600; color: var(--accent);">Bloogle • Live Project: <a href="https://tvrepaircoimbatore.in" target="_blank" style="color: var(--accent); text-decoration: underline;">tvrepaircoimbatore.in <i class="fas fa-arrow-up-right-from-square"></i></a></div>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); background: var(--accent-subtle); border: 1px solid var(--accent-border); padding: 0.35rem 0.85rem; border-radius: var(--radius-full);">
+            Oct 2026 – Present
+          </span>
+        </div>
+
+        <ul class="project-highlights-list" style="margin-top: 1.5rem; font-size: 1rem; gap: 0.75rem;">
+          <li style="align-items: flex-start; font-size: 0.98rem; line-height: 1.6;">
+            <i class="fas fa-circle-check" style="margin-top: 0.3rem;"></i>
+            <span><strong>REST API Architecture:</strong> Built high-performance REST APIs using <strong>NestJS, TypeScript, Prisma ORM, and PostgreSQL</strong> to capture, validate, and store customer service leads in a live production environment.</span>
+          </li>
+          <li style="align-items: flex-start; font-size: 0.98rem; line-height: 1.6;">
+            <i class="fas fa-circle-check" style="margin-top: 0.3rem;"></i>
+            <span><strong>Multi-Role Authentication (RBAC):</strong> Implemented Role-Based Access Control supporting <strong>Google OAuth 2.0</strong> and <strong>JWT</strong> username/password authentication for Shop Owners and Admin management dashboards.</span>
+          </li>
+          <li style="align-items: flex-start; font-size: 0.98rem; line-height: 1.6;">
+            <i class="fas fa-circle-check" style="margin-top: 0.3rem;"></i>
+            <span><strong>Admin Workflow & Dynamic Query Filtering:</strong> Engineered an automated Admin approval workflow and dynamic query matching to pair verified shop owners with leads based on location and service category, designing the relational schema for subscription-based lead access.</span>
+          </li>
+        </ul>
+
+        <div class="service-tags" style="margin-top: 1.5rem;">
+          <span>NestJS</span>
+          <span>TypeScript</span>
+          <span>Prisma ORM</span>
+          <span>PostgreSQL</span>
+          <span>Google OAuth 2.0</span>
+          <span>JWT</span>
+          <span>RBAC</span>
+          <span>REST APIs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES / "WHAT I BUILD" ================= -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><i class="fas fa-toolbox"></i> WHAT I BUILD</span>
+        <h2 class="section-title">Core Technical <span>Services.</span></h2>
+        <p class="section-subtitle">Scalable server-side architectures, database schemas, and automated cloud deployments.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div>
+            <div class="service-header">
+              <div class="service-icon-box"><i class="fab fa-node-js"></i></div>
+              <span class="service-num">01 • BACKEND</span>
+            </div>
+            <h3>Scalable REST APIs (NestJS)</h3>
+            <p>
+              Engineering modular, enterprise-grade server-side applications in TypeScript with NestJS. Clean controllers, dependency injection, and data validation pipes.
+            </p>
+          </div>
+          <div class="service-tags">
+            <span>NestJS</span>
+            <span>TypeScript</span>
+            <span>Node.js</span>
+            <span>REST APIs</span>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div>
+            <div class="service-header">
+              <div class="service-icon-box"><i class="fas fa-database"></i></div>
+              <span class="service-num">02 • DATABASES</span>
+            </div>
+            <h3>PostgreSQL & Prisma ORM</h3>
+            <p>
+              Relational database architecture, normalized schema design, Prisma ORM migrations, indexing, and high-performance SQL query optimization.
+            </p>
+          </div>
+          <div class="service-tags">
+            <span>PostgreSQL</span>
+            <span>Prisma ORM</span>
+            <span>MySQL</span>
+            <span>Relational Schema</span>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div>
+            <div class="service-header">
+              <div class="service-icon-box"><i class="fas fa-user-lock"></i></div>
+              <span class="service-num">03 • AUTH</span>
+            </div>
+            <h3>RBAC, Google OAuth & JWT</h3>
+            <p>
+              Securing enterprise portals with multi-role access control (RBAC), stateless JWT token lifecycles, refresh tokens, and Google OAuth 2.0 single sign-on.
+            </p>
+          </div>
+          <div class="service-tags">
+            <span>Google OAuth 2.0</span>
+            <span>JWT</span>
+            <span>RBAC</span>
+            <span>Guards & Middleware</span>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div>
+            <div class="service-header">
+              <div class="service-icon-box"><i class="fas fa-shield-halved"></i></div>
+              <span class="service-num">04 • DEVSECOPS</span>
+            </div>
+            <h3>DevSecOps CI/CD Pipelines</h3>
+            <p>
+              Automated build, test, and release pipelines using Jenkins and GitHub Webhooks. Shift-left security with SonarQube code gates and Trivy container vulnerability scans.
+            </p>
+          </div>
+          <div class="service-tags">
+            <span>Jenkins</span>
+            <span>SonarQube</span>
+            <span>Trivy</span>
+            <span>GitHub Actions</span>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div>
+            <div class="service-header">
+              <div class="service-icon-box"><i class="fas fa-layer-group"></i></div>
+              <span class="service-num">05 • IAC</span>
+            </div>
+            <h3>AWS Infrastructure as Code</h3>
+            <p>
+              Provisioning reproducible AWS cloud resources (EC2, IAM, Security Groups) with Terraform and automating server configurations with Ansible Playbooks.
+            </p>
+          </div>
+          <div class="service-tags">
+            <span>Terraform</span>
+            <span>Ansible</span>
+            <span>AWS EC2</span>
+            <span>IAM & VPC</span>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div>
+            <div class="service-header">
+              <div class="service-icon-box"><i class="fas fa-chart-line"></i></div>
+              <span class="service-num">06 • OBSERVABILITY</span>
+            </div>
+            <h3>Observability & Monitoring</h3>
+            <p>
+              Full-stack system telemetry using Prometheus, Node Exporter, and customized Grafana visual dashboards with proactive 80% saturation alert notifications.
+            </p>
+          </div>
+          <div class="service-tags">
+            <span>Prometheus</span>
+            <span>Grafana</span>
+            <span>Alertmanager</span>
+            <span>AWS SNS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TECHNICAL SKILLS ================= -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><i class="fas fa-code"></i> TECHNICAL ARSENAL</span>
+        <h2 class="section-title">Skills & Technologies <span>Stack.</span></h2>
+        <p class="section-subtitle">Technologies and toolsets aligned with my production resume and hands-on projects.</p>
+      </div>
+
+      <div class="skills-categories-grid">
+        <!-- Backend & Languages -->
+        <div class="skill-category-card">
+          <div class="cat-title-wrap">
+            <i class="fab fa-node-js cat-icon"></i>
+            <h3>Backend & Languages</h3>
+          </div>
+          <div class="skill-badges-flow">
+            <span class="skill-badge"><i class="fas fa-code"></i> TypeScript</span>
+            <span class="skill-badge"><i class="fab fa-js"></i> JavaScript (ES6+)</span>
+            <span class="skill-badge"><i class="fab fa-node"></i> Node.js</span>
+            <span class="skill-badge"><i class="fas fa-server"></i> NestJS Framework</span>
+            <span class="skill-badge"><i class="fas fa-network-wired"></i> REST API Design</span>
+            <span class="skill-badge"><i class="fab fa-google"></i> Google OAuth 2.0</span>
+            <span class="skill-badge"><i class="fas fa-key"></i> JWT Auth</span>
+            <span class="skill-badge"><i class="fab fa-python"></i> Python & Bash</span>
+          </div>
+        </div>
+
+        <!-- Databases & ORM -->
+        <div class="skill-category-card">
+          <div class="cat-title-wrap">
+            <i class="fas fa-database cat-icon"></i>
+            <h3>Databases & ORM</h3>
+          </div>
+          <div class="skill-badges-flow">
+            <span class="skill-badge"><i class="fas fa-database"></i> PostgreSQL</span>
+            <span class="skill-badge"><i class="fas fa-cubes"></i> Prisma ORM</span>
+            <span class="skill-badge"><i class="fas fa-table"></i> MySQL</span>
+            <span class="skill-badge"><i class="fas fa-project-diagram"></i> Relational Schema Design</span>
+            <span class="skill-badge"><i class="fas fa-bolt"></i> Query Optimization</span>
+            <span class="skill-badge"><i class="fas fa-code-branch"></i> SQL Migrations</span>
+          </div>
+        </div>
+
+        <!-- Cloud & Containers -->
+        <div class="skill-category-card">
+          <div class="cat-title-wrap">
+            <i class="fab fa-aws cat-icon"></i>
+            <h3>Cloud & Containers</h3>
+          </div>
+          <div class="skill-badges-flow">
+            <span class="skill-badge"><i class="fab fa-aws"></i> AWS EC2</span>
+            <span class="skill-badge"><i class="fas fa-user-shield"></i> AWS IAM</span>
+            <span class="skill-badge"><i class="fas fa-shield"></i> Security Groups</span>
+            <span class="skill-badge"><i class="fas fa-chart-area"></i> AWS CloudWatch</span>
+            <span class="skill-badge"><i class="fas fa-bell"></i> AWS SNS</span>
+            <span class="skill-badge"><i class="fab fa-docker"></i> Docker Engine</span>
+            <span class="skill-badge"><i class="fas fa-layer-group"></i> Docker Compose</span>
+            <span class="skill-badge"><i class="fab fa-linux"></i> Linux Administration</span>
+          </div>
+        </div>
+
+        <!-- DevSecOps & Tools -->
+        <div class="skill-category-card">
+          <div class="cat-title-wrap">
+            <i class="fas fa-gears cat-icon"></i>
+            <h3>DevSecOps, IaC & Tools</h3>
+          </div>
+          <div class="skill-badges-flow">
+            <span class="skill-badge"><i class="fas fa-server"></i> Jenkins CI/CD</span>
+            <span class="skill-badge"><i class="fab fa-github"></i> GitHub Actions</span>
+            <span class="skill-badge"><i class="fas fa-layer-group"></i> Terraform</span>
+            <span class="skill-badge"><i class="fas fa-network-wired"></i> Ansible</span>
+            <span class="skill-badge"><i class="fas fa-chart-line"></i> Prometheus</span>
+            <span class="skill-badge"><i class="fas fa-chart-pie"></i> Grafana</span>
+            <span class="skill-badge"><i class="fas fa-shield-check"></i> SonarQube</span>
+            <span class="skill-badge"><i class="fas fa-bug-slash"></i> Trivy Scanner</span>
+            <span class="skill-badge"><i class="fas fa-paper-plane"></i> Postman</span>
+            <span class="skill-badge"><i class="fab fa-git-alt"></i> Git Version Control</span>
+          </div>
+        </div>
+
+        <!-- Systems & Architecture -->
+        <div class="skill-category-card">
+          <div class="cat-title-wrap">
+            <i class="fas fa-microchip cat-icon"></i>
+            <h3>Systems & Architecture</h3>
+          </div>
+          <div class="skill-badges-flow">
+            <span class="skill-badge"><i class="fas fa-diagram-project"></i> UML Modeling</span>
+            <span class="skill-badge"><i class="fas fa-server"></i> Apache Web Server</span>
+            <span class="skill-badge"><i class="fas fa-network-wired"></i> Nginx Reverse Proxy</span>
+            <span class="skill-badge"><i class="fas fa-lock"></i> SSH Server Hardening</span>
+            <span class="skill-badge"><i class="fas fa-clock"></i> Webhook Automation</span>
+          </div>
+        </div>
+
+        <!-- Education Credentials -->
+        <div class="skill-category-card">
+          <div class="cat-title-wrap">
+            <i class="fas fa-graduation-cap cat-icon"></i>
+            <h3>Academic Background</h3>
+          </div>
+          <div class="skill-badges-flow">
+            <span class="skill-badge"><i class="fas fa-award"></i> B.Tech IT — Kumaraguru</span>
+            <span class="skill-badge"><i class="fas fa-star"></i> CGPA: 7.32 (71.1%)</span>
+            <span class="skill-badge"><i class="fas fa-certificate"></i> Class XII (HSC) — 91%</span>
+            <span class="skill-badge"><i class="fas fa-certificate"></i> Class X (SSLC) — 89%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS SHOWCASE WITH CATEGORY FILTERS ================= -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><i class="fas fa-folder-open"></i> PORTFOLIO PROJECTS</span>
+        <h2 class="section-title">Featured Resume <span>Projects.</span></h2>
+        <p class="section-subtitle">Real-world production backend services, automated DevSecOps pipelines, and cloud systems.</p>
+      </div>
+
+      <!-- User-Friendly Project Category Filter Pills -->
+      <div class="project-filters-wrap">
+        <div class="project-filters-row">
+          <button class="filter-btn active" data-filter="all">All Projects (5)</button>
+          <button class="filter-btn" data-filter="backend">Backend & Live Apps</button>
+          <button class="filter-btn" data-filter="cicd">DevSecOps & CI/CD</button>
+          <button class="filter-btn" data-filter="iac">Cloud IaC (AWS)</button>
+          <button class="filter-btn" data-filter="observability">Monitoring</button>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: DevSecOps + GitOps Pipeline -->
+        <div class="project-card" data-category="cicd">
+          <div class="window-header">
+            <div class="window-dots">
+              <span class="w-dot dot-red"></span>
+              <span class="w-dot dot-yellow"></span>
+              <span class="w-dot dot-green"></span>
+            </div>
+            <span class="window-title">Jenkinsfile — devsecops-pipeline</span>
+            <span class="window-badge">RESUME PROJECT</span>
+          </div>
+          <div class="project-media-wrap" onclick="openProjectGallery('devsecops')">
+            <img src="images/projects/devsecops/devsecops-1.png" alt="DevSecOps CI/CD Pipeline" />
+            <div class="media-hover-overlay">
+              <i class="fas fa-expand"></i>
+              <span>View Screenshots (4)</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">DevSecOps CI/CD Pipeline</h3>
+            <p class="project-desc">
+              Designed and automated an end-to-end DevSecOps pipeline using Jenkins triggered via GitHub Webhooks, streamlining build, security testing, and deployment workflows.
+            </p>
+            <ul class="project-highlights-list">
+              <li><i class="fas fa-check"></i> Enforced code quality gates with <strong>SonarQube</strong> static analysis</li>
+              <li><i class="fas fa-check"></i> Integrated <strong>Trivy</strong> for Docker container image vulnerability scanning</li>
+              <li><i class="fas fa-check"></i> Built multi-stage Docker images with automated deployment to AWS EC2</li>
+            </ul>
+            <div class="project-tags-wrap">
+              <span class="project-tag">Jenkins</span>
+              <span class="project-tag">GitHub</span>
+              <span class="project-tag">Docker</span>
+              <span class="project-tag">SonarQube</span>
+              <span class="project-tag">Trivy</span>
+              <span class="project-tag">AWS EC2</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/singathurai007/devsecops-gitops" target="_blank" class="btn-project-link">
+                <i class="fab fa-github"></i>
+                <span>Source Code</span>
+              </a>
+              <button class="btn-project-gallery" onclick="openProjectGallery('devsecops')">
+                <i class="fas fa-images"></i>
+                <span>Screenshots (4)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: AWS Infrastructure Automation using Terraform & Ansible -->
+        <div class="project-card" data-category="iac">
+          <div class="window-header">
+            <div class="window-dots">
+              <span class="w-dot dot-red"></span>
+              <span class="w-dot dot-yellow"></span>
+              <span class="w-dot dot-green"></span>
+            </div>
+            <span class="window-title">main.tf & playbook.yml</span>
+            <span class="window-badge">RESUME PROJECT</span>
+          </div>
+          <div class="project-media-wrap" onclick="openProjectGallery('terraform')">
+            <img src="images/projects/terraform-jenkins/terraform-jenkins-1.png" alt="Terraform and Ansible AWS Project" />
+            <div class="media-hover-overlay">
+              <i class="fas fa-expand"></i>
+              <span>View Screenshots (2)</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">AWS Infrastructure Automation using Terraform & Ansible</h3>
+            <p class="project-desc">
+              Provisioned modular AWS infrastructure (EC2 instances, IAM roles, Security Groups) as code using Terraform with remote state management for safe, repeatable deployments.
+            </p>
+            <ul class="project-highlights-list">
+              <li><i class="fas fa-check"></i> Declarative Infrastructure as Code (IaC) configuration</li>
+              <li><i class="fas fa-check"></i> Automated server configuration and web server deployment with <strong>Ansible</strong></li>
+              <li><i class="fas fa-check"></i> Multi-environment rollout across Dev, QA, and Production environments</li>
+            </ul>
+            <div class="project-tags-wrap">
+              <span class="project-tag">AWS EC2</span>
+              <span class="project-tag">Terraform</span>
+              <span class="project-tag">Ansible</span>
+              <span class="project-tag">IAM</span>
+              <span class="project-tag">Linux</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/singathurai007" target="_blank" class="btn-project-link">
+                <i class="fab fa-github"></i>
+                <span>Source Code</span>
+              </a>
+              <button class="btn-project-gallery" onclick="openProjectGallery('terraform')">
+                <i class="fas fa-images"></i>
+                <span>Screenshots (2)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: AWS EC2 Infrastructure Monitoring Platform -->
+        <div class="project-card" data-category="observability">
+          <div class="window-header">
+            <div class="window-dots">
+              <span class="w-dot dot-red"></span>
+              <span class="w-dot dot-yellow"></span>
+              <span class="w-dot dot-green"></span>
+            </div>
+            <span class="window-title">docker-compose.monitoring.yml</span>
+            <span class="window-badge">RESUME PROJECT</span>
+          </div>
+          <div class="project-media-wrap" onclick="openProjectGallery('monitoring')">
+            <img src="images/projects/monitoring/monitoring-1.png" alt="Prometheus Grafana Monitoring Platform" />
+            <div class="media-hover-overlay">
+              <i class="fas fa-expand"></i>
+              <span>View Screenshots (2)</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">AWS EC2 Infrastructure Monitoring Platform</h3>
+            <p class="project-desc">
+              Built a containerized observability stack using Docker Compose, Prometheus, Node Exporter, and Grafana to monitor CPU, memory, traffic, and error metrics in real time.
+            </p>
+            <ul class="project-highlights-list">
+              <li><i class="fas fa-check"></i> Proactive threshold alerts configured for <strong>80% resource saturation</strong></li>
+              <li><i class="fas fa-check"></i> Integrated with <strong>Alertmanager</strong> and AWS SNS/CloudWatch</li>
+              <li><i class="fas fa-check"></i> Visual executive Grafana dashboards for server telemetry</li>
+            </ul>
+            <div class="project-tags-wrap">
+              <span class="project-tag">Prometheus</span>
+              <span class="project-tag">Grafana</span>
+              <span class="project-tag">Node Exporter</span>
+              <span class="project-tag">Docker Compose</span>
+              <span class="project-tag">AWS SNS</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/singathurai007" target="_blank" class="btn-project-link">
+                <i class="fab fa-github"></i>
+                <span>Source Code</span>
+              </a>
+              <button class="btn-project-gallery" onclick="openProjectGallery('monitoring')">
+                <i class="fas fa-images"></i>
+                <span>Screenshots (2)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Live Project: TV Repair Coimbatore -->
+        <div class="project-card" data-category="backend">
+          <div class="window-header">
+            <div class="window-dots">
+              <span class="w-dot dot-red"></span>
+              <span class="w-dot dot-yellow"></span>
+              <span class="w-dot dot-green"></span>
+            </div>
+            <span class="window-title">api.tvrepaircoimbatore.in</span>
+            <span class="window-badge" style="color: var(--accent); background: var(--accent-subtle);">LIVE COMMERCIAL</span>
+          </div>
+          <div class="project-media-wrap" onclick="window.open('https://tvrepaircoimbatore.in', '_blank')">
+            <img src="images/projects/github-actions/github-actions-1.png" alt="TV Repair Coimbatore Lead Marketplace" />
+            <div class="media-hover-overlay">
+              <i class="fas fa-external-link-alt"></i>
+              <span>Visit Live Website (tvrepaircoimbatore.in)</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">TV Repair Coimbatore — Service Lead Marketplace</h3>
+            <p class="project-desc">
+              Live commercial platform built during my Backend Internship at Bloogle. Designed REST APIs to capture, validate, and dynamically match customer leads with verified repair shop owners.
+            </p>
+            <ul class="project-highlights-list">
+              <li><i class="fas fa-check"></i> Built with <strong>NestJS, TypeScript, Prisma ORM & PostgreSQL</strong></li>
+              <li><i class="fas fa-check"></i> Role-Based Access Control (RBAC) with <strong>Google OAuth 2.0 & JWT</strong></li>
+              <li><i class="fas fa-check"></i> Admin verification workflow & subscription-based lead filtering</li>
+            </ul>
+            <div class="project-tags-wrap">
+              <span class="project-tag">NestJS</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Prisma ORM</span>
+              <span class="project-tag">PostgreSQL</span>
+              <span class="project-tag">Google OAuth</span>
+              <span class="project-tag">JWT</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://tvrepaircoimbatore.in" target="_blank" class="btn-project-link">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+                <span>Visit Live Platform</span>
+              </a>
+              <span style="margin-left: auto; font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-emerald);">
+                <i class="fas fa-circle-check"></i> In Production
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Automobile Repair Management System -->
+        <div class="project-card" data-category="backend">
+          <div class="window-header">
+            <div class="window-dots">
+              <span class="w-dot dot-red"></span>
+              <span class="w-dot dot-yellow"></span>
+              <span class="w-dot dot-green"></span>
+            </div>
+            <span class="window-title">automobile_repair_db.sql</span>
+            <span class="window-badge">RESUME PROJECT</span>
+          </div>
+          <div class="project-media-wrap" onclick="openProjectGallery('githubactions')">
+            <img src="images/projects/github-actions/github-actions-2.png" alt="Automobile Repair Management System" />
+            <div class="media-hover-overlay">
+              <i class="fas fa-expand"></i>
+              <span>View Screenshots (2)</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Automobile Repair Management System</h3>
+            <p class="project-desc">
+              Full-stack Automobile Repair Management System featuring customer service booking, repair job tracking, customer invoice generation, and status updates through an intuitive user interface.
+            </p>
+            <ul class="project-highlights-list">
+              <li><i class="fas fa-check"></i> Interactive client booking and repair job status tracker</li>
+              <li><i class="fas fa-check"></i> Relational MySQL database schema design with optimized queries</li>
+              <li><i class="fas fa-check"></i> Responsive front-end built with HTML5, CSS3, and JavaScript</li>
+            </ul>
+            <div class="project-tags-wrap">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">CSS3</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">Apache</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/singathurai007" target="_blank" class="btn-project-link">
+                <i class="fab fa-github"></i>
+                <span>Source Code</span>
+              </a>
+              <button class="btn-project-gallery" onclick="openProjectGallery('githubactions')">
+                <i class="fas fa-images"></i>
+                <span>Screenshots (2)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICATIONS SHOWCASE ("Verified Learning") ================= -->
+  <section class="section cert-section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><i class="fas fa-award"></i> VERIFIED LEARNING</span>
+        <h2 class="section-title">Industry <span>Certifications.</span></h2>
+        <p class="section-subtitle">Validated expertise across cloud computing, software engineering, systems security, and hardware interfacing.</p>
+      </div>
+
+      <div class="cert-showcase-wrap">
+        <!-- Big Certificate Active Viewer (Left) -->
+        <div class="cert-display-card">
+          <div class="cert-top-bar">
+            <span class="cert-counter" id="mainCertCounter">01 / 06</span>
+            <span class="cert-verified-pill">
+              <i class="fas fa-certificate"></i>
+              <span>Verified Credential</span>
+            </span>
+          </div>
+
+          <div class="cert-image-frame">
+            <img id="mainCertImage" src="images/certificates/aws.png" alt="AWS Cloud Practitioner Essentials" />
+          </div>
+
+          <div class="cert-info-bar">
+            <div class="cert-info-text">
+              <span class="cert-label-mini" id="mainCertLabel">AWS TRAINING & CERTIFICATION</span>
+              <h3 id="mainCertTitle">AWS Cloud Practitioner Essentials</h3>
+              <p id="mainCertProvider">AWS Training & Certification • June 17, 2026</p>
+            </div>
+            <a id="mainCertLink" href="certificates/aws-cloud-practitioner-essentials.pdf" target="_blank" class="btn-cert-open">
+              <i class="fas fa-arrow-up-right-from-square"></i>
+              <span>View Official Certificate</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Thumbnails Selector List (Right) -->
+        <div class="cert-selector-list">
+          <!-- 01 AWS -->
+          <button class="cert-thumb-btn active" data-index="0">
+            <span class="cert-thumb-index">01</span>
+            <div class="cert-thumb-mini-img">
+              <img src="images/certificates/aws.png" alt="AWS Cloud" />
+            </div>
+            <div class="cert-thumb-details">
+              <strong>AWS Cloud Practitioner</strong>
+              <small>AWS Training & Certification</small>
+            </div>
+          </button>
+
+          <!-- 02 IBM -->
+          <button class="cert-thumb-btn" data-index="1">
+            <span class="cert-thumb-index">02</span>
+            <div class="cert-thumb-mini-img">
+              <img src="images/certificates/cloud-computing.png" alt="IBM Cloud" />
+            </div>
+            <div class="cert-thumb-details">
+              <strong>Cloud Computing Fundamentals</strong>
+              <small>IBM SkillsBuild</small>
+            </div>
+          </button>
+
+          <!-- 03 Software Engineering UML -->
+          <button class="cert-thumb-btn" data-index="2">
+            <span class="cert-thumb-index">03</span>
+            <div class="cert-thumb-mini-img">
+              <img src="images/certificates/software-engineering-uml.png" alt="Software Engineering UML" />
+            </div>
+            <div class="cert-thumb-details">
+              <strong>Software Engineering (UML)</strong>
+              <small>HKUST / Coursera</small>
+            </div>
+          </button>
+
+          <!-- 04 Security & Risk -->
+          <button class="cert-thumb-btn" data-index="3">
+            <span class="cert-thumb-index">04</span>
+            <div class="cert-thumb-mini-img">
+              <img src="images/certificates/security-risk-management.png" alt="Security & Risk" />
+            </div>
+            <div class="cert-thumb-details">
+              <strong>Security & Risk Management</strong>
+              <small>Packt / Coursera</small>
+            </div>
+          </button>
+
+          <!-- 05 Arduino Interfacing -->
+          <button class="cert-thumb-btn" data-index="4">
+            <span class="cert-thumb-index">05</span>
+            <div class="cert-thumb-mini-img">
+              <img src="images/certificates/arduino.png" alt="Arduino Interfacing" />
+            </div>
+            <div class="cert-thumb-details">
+              <strong>Interfacing with Arduino</strong>
+              <small>UC Irvine / Coursera</small>
+            </div>
+          </button>
+
+          <!-- 06 IT Support Executive -->
+          <button class="cert-thumb-btn" data-index="5">
+            <span class="cert-thumb-index">06</span>
+            <div class="cert-thumb-mini-img">
+              <img src="images/certificates/it-support-executive.png" alt="IT Technical Support" />
+            </div>
+            <div class="cert-thumb-details">
+              <strong>IT Technical Support Executive</strong>
+              <small>Skill India / NSDC</small>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION & JOURNEY ================= -->
+  <section class="section journey-section" id="journey">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><i class="fas fa-graduation-cap"></i> ACADEMIC & CAREER TIMELINE</span>
+        <h2 class="section-title">Education & <span>Experience.</span></h2>
+        <p class="section-subtitle">Verified academic qualifications from Coimbatore and professional internship milestones.</p>
+      </div>
+
+      <div class="journey-tabs-wrap">
+        <div class="tabs-pill-box">
+          <button class="tab-btn active" data-tab="experience">Industry Experience</button>
+          <button class="tab-btn" data-tab="education">Formal Education</button>
+        </div>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Experience List -->
+        <div id="experienceList">
+          <!-- Item 1: Bloogle -->
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role">Backend Development Intern</h3>
+                <span class="timeline-date">Oct 2026 – Present</span>
+              </div>
+              <div class="timeline-org">
+                <i class="fas fa-building"></i>
+                <span>Bloogle • Project: tvrepaircoimbatore.in</span>
+              </div>
+              <p class="timeline-desc">
+                Architected server-side REST APIs using NestJS, TypeScript, Prisma ORM, and PostgreSQL. Engineered multi-role RBAC with Google OAuth 2.0 and JWT, matching verified shop owners with customer leads.
+              </p>
+              <div class="timeline-skills-row">
+                <span>NestJS</span>
+                <span>TypeScript</span>
+                <span>Prisma ORM</span>
+                <span>PostgreSQL</span>
+                <span>OAuth 2.0</span>
+                <span>JWT</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Cloud & DevOps Labs -->
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role">DevOps & Cloud Automation Engineer</h3>
+                <span class="timeline-date">2024 – 2026</span>
+              </div>
+              <div class="timeline-org">
+                <i class="fas fa-terminal"></i>
+                <span>Cloud & DevOps Practical Engineering Labs</span>
+              </div>
+              <p class="timeline-desc">
+                Automated end-to-end DevSecOps CI/CD pipelines with Jenkins and SonarQube. Provisioned AWS EC2 infrastructures via Terraform and configured Prometheus/Grafana server observability.
+              </p>
+              <div class="timeline-skills-row">
+                <span>AWS</span>
+                <span>Terraform</span>
+                <span>Ansible</span>
+                <span>Docker</span>
+                <span>Prometheus</span>
+                <span>Jenkins</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education List (Hidden by default) -->
+        <div id="educationList" style="display: none;">
+          <!-- Kumaraguru College of Technology -->
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role">B.Tech in Information Technology</h3>
+                <span class="timeline-date">2022 – 2026</span>
+              </div>
+              <div class="timeline-org">
+                <i class="fas fa-university"></i>
+                <span>Kumaraguru College of Technology, Coimbatore</span>
+              </div>
+              <p class="timeline-desc">
+                Graduated with <strong>CGPA: 7.32 (71.1%)</strong>. Specialization in Relational Database Management Systems (RDBMS), Operating Systems, Computer Networks, Software Engineering, Object-Oriented Modeling, and Cloud Systems.
+              </p>
+              <div class="timeline-skills-row">
+                <span>CGPA: 7.32</span>
+                <span>Information Technology</span>
+                <span>Coimbatore</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Class XII (HSC) -->
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role">Higher Secondary School Certificate (Class XII)</h3>
+                <span class="timeline-date">91% Marks</span>
+              </div>
+              <div class="timeline-org">
+                <i class="fas fa-school"></i>
+                <span>St. Corporation Hr Sec School, Coimbatore</span>
+              </div>
+              <p class="timeline-desc">
+                Completed Higher Secondary education with distinction (<strong>91%</strong>) in Science and Mathematics curriculum.
+              </p>
+            </div>
+          </div>
+
+          <!-- Class X (SSLC) -->
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3 class="timeline-role">Secondary School Leaving Certificate (Class X)</h3>
+                <span class="timeline-date">89% Marks</span>
+              </div>
+              <div class="timeline-org">
+                <i class="fas fa-school"></i>
+                <span>St. Arulanandhar Hr Sec School, Ramanathapuram</span>
+              </div>
+              <p class="timeline-desc">
+                Graduated secondary school education with <strong>89%</strong> aggregate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS / CLIENT LOVE ================= -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><i class="fas fa-heart"></i> REVIEWS & ENDORSEMENTS</span>
+        <h2 class="section-title">Peer Recognition & <span>Feedback.</span></h2>
+        <p class="section-subtitle">What peers, project leads, and collaborators say about my backend engineering and DevOps quality.</p>
+      </div>
+
+      <div class="testimonials-top-bar">
+        <button class="btn-add-testimonial" id="openAddTestimonialBtn">
+          <i class="fas fa-plus-circle"></i>
+          <span>Add Recommendation</span>
+        </button>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div>
+            <div class="testi-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testi-quote">
+              "Singathurai's NestJS backend and Prisma ORM schema for tvrepaircoimbatore.in was structured flawlessly. Clean controllers, rock-solid RBAC, and seamless API performance."
+            </p>
+          </div>
+          <div class="testi-author">
+            <div class="author-avatar">BL</div>
+            <div class="author-info">
+              <strong>Bloogle Lead</strong>
+              <span>Lead Backend Engineer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div>
+            <div class="testi-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testi-quote">
+              "Outstanding Terraform and AWS expertise. Clean, modular Infrastructure as Code scripts that spin up environments without a single hitch. Highly recommended for any engineering role."
+            </p>
+          </div>
+          <div class="testi-author">
+            <div class="author-avatar">AK</div>
+            <div class="author-info">
+              <strong>Arun Kumar</strong>
+              <span>Senior Software Engineer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div>
+            <div class="testi-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testi-quote">
+              "His Prometheus and Grafana dashboards gave our team complete visibility into server load, memory spikes, and disk latency. Extremely thorough and proactive mindset."
+            </p>
+          </div>
+          <div class="testi-author">
+            <div class="author-avatar">MS</div>
+            <div class="author-info">
+              <strong>Manoj S.</strong>
+              <span>Systems Operations Lead</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ("CONNECT - Let's Talk") ================= -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><i class="fas fa-paper-plane"></i> LET'S CONNECT</span>
+        <h2 class="section-title">Get In Touch. <span>Let's Talk.</span></h2>
+        <p class="section-subtitle">Open to Backend Developer, DevOps Engineer, and Cloud Software Engineering positions.</p>
+      </div>
+
+      <div class="contact-split-grid">
+        <!-- Left: Direct Channels -->
+        <div class="contact-info-col">
+          <div class="contact-card-box">
+            <h3>Direct Contact Channels</h3>
+            <p>
+              Feel free to reach out directly via email, phone, or LinkedIn. I typically respond within a few hours.
+            </p>
+
+            <div class="direct-channels-list">
+              <!-- Email Card -->
+              <div class="channel-item">
+                <div class="channel-icon"><i class="fas fa-envelope"></i></div>
+                <div class="channel-text">
+                  <span>EMAIL ADDRESS</span>
+                  <strong>cmsingathurai@gmail.com</strong>
+                </div>
+                <button class="btn-copy-email" id="copyEmailBtn" title="Copy Email to Clipboard">
+                  <i class="far fa-copy"></i>
+                </button>
+              </div>
+
+              <!-- Phone / WhatsApp -->
+              <a href="https://wa.me/918778457577" target="_blank" class="channel-item">
+                <div class="channel-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="channel-text">
+                  <span>PHONE & WHATSAPP</span>
+                  <strong>+91 8778457577</strong>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square" style="margin-left: auto; color: var(--text-dim); font-size: 0.85rem;"></i>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/in/singathuraic" target="_blank" class="channel-item">
+                <div class="channel-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div class="channel-text">
+                  <span>LINKEDIN PROFILE</span>
+                  <strong>linkedin.com/in/singathuraic</strong>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square" style="margin-left: auto; color: var(--text-dim); font-size: 0.85rem;"></i>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/singathurai007" target="_blank" class="channel-item">
+                <div class="channel-icon"><i class="fab fa-github"></i></div>
+                <div class="channel-text">
+                  <span>GITHUB REPOSITORIES</span>
+                  <strong>github.com/singathurai007</strong>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square" style="margin-left: auto; color: var(--text-dim); font-size: 0.85rem;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Form -->
+        <div class="contact-form-card">
+          <form id="contactForm">
+            <div class="form-group">
+              <label class="form-label" for="formName">Your Name</label>
+              <input class="form-input" type="text" id="formName" placeholder="e.g. Hiring Manager" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formEmail">Your Email</label>
+              <input class="form-input" type="email" id="formEmail" placeholder="e.g. recruiter@company.com" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formMessage">Your Message / Opportunity Details</label>
+              <textarea class="form-textarea" id="formMessage" placeholder="Tell me about your team, tech stack, or open positions..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-form">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+
+            <div class="form-feedback" id="formFeedback"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2>SINGATHURAI C</h2>
+          <p>Backend Developer & DevOps Engineer • B.Tech IT, Kumaraguru College of Technology.</p>
+        </div>
+
+        <ul class="footer-links-row">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Work</a></li>
+          <li><a href="#certifications">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="resume.pdf" target="_blank">Resume PDF</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © <span id="currentYear"></span> Singathurai C. All Rights Reserved. Built with modern engineering discipline.
+        </div>
+        <div class="footer-social-pills">
+          <a href="https://github.com/singathurai007" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/singathuraic" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:cmsingathurai@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/918778457577" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= BACK TO TOP BUTTON ================= -->
+  <button id="backToTopBtn" class="btn-back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ================= LIGHTBOX MODAL (PROJECT SCREENSHOTS) ================= -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-header">
+      <h3 class="lightbox-title" id="lightboxTitle">Project Screenshots</h3>
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="lightbox-content-box">
+      <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <img id="lightboxImg" class="lightbox-img" src="" alt="Project Screenshot Preview" />
+      <button class="lightbox-nav-btn lightbox-next" id="lightboxNext" aria-label="Next image">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+  </div>
+
+  <!-- ================= COMMAND PALETTE (CTRL + K) ================= -->
+  <div class="command-palette-backdrop" id="commandPalette">
+    <div class="command-palette-modal">
+      <div class="palette-input-wrap">
+        <i class="fas fa-search"></i>
+        <input type="text" id="paletteInput" class="palette-input" placeholder="Search resume, projects, skills, education, links (Esc to close)..." />
+        <span class="palette-esc">ESC</span>
+      </div>
+      <ul class="palette-results-list" id="paletteResults"></ul>
+    </div>
+  </div>
+
+  <!-- ================= ADD TESTIMONIAL MODAL ================= -->
+  <div class="testimonial-modal-backdrop" id="testimonialModal">
+    <div class="testimonial-modal">
+      <button class="testi-modal-close" id="closeAddTestimonialBtn" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #ffffff; margin-bottom: 0.5rem;">Add a Recommendation</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Worked with Singathurai? Your words will appear on the wall.</p>
+
+      <form id="testimonialForm">
+        <div class="form-group">
+          <label class="form-label" for="testiName">Your Full Name *</label>
+          <input class="form-input" type="text" id="testiName" placeholder="e.g. Lead Engineer" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="testiRole">Your Role / Company</label>
+          <input class="form-input" type="text" id="testiRole" placeholder="e.g. Tech Lead at Bloogle" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Rating</label>
+          <div class="star-rating-select" id="starRatingSelect">
+            <i class="fas fa-star selected" data-value="1"></i>
+            <i class="fas fa-star selected" data-value="2"></i>
+            <i class="fas fa-star selected" data-value="3"></i>
+            <i class="fas fa-star selected" data-value="4"></i>
+            <i class="fas fa-star selected" data-value="5"></i>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="testiMessage">Recommendation / Words *</label>
+          <textarea class="form-textarea" id="testiMessage" placeholder="What was it like collaborating or working with Singathurai?" required style="min-height: 100px;"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit-form" style="padding: 0.75rem 1.5rem; font-size: 0.95rem;">
+          <span>Submit Recommendation</span>
+          <i class="fas fa-check"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= TOAST NOTIFICATION ================= -->
+  <div class="toast-notice" id="toastNotice">
+    <i class="fas fa-check-circle"></i>
+    <span class="toast-text">Notification message</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
