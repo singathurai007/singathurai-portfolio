@@ -32,11 +32,12 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { label: 'Experience', href: '#experience', id: 'experience' },
-    { label: 'Projects', href: '#projects', id: 'projects' },
-    { label: 'Skills', href: '#skills', id: 'skills' },
+    { label: t.nav?.home || 'Home', href: '#home', id: 'home' },
+    { label: t.nav?.experience || 'Experience', href: '#experience', id: 'experience' },
+    { label: t.nav?.projects || 'Projects', href: '#projects', id: 'projects' },
+    { label: t.nav?.skills || 'Skills', href: '#skills', id: 'skills' },
     { label: 'Certifications', href: '#certifications', id: 'certifications' },
-    { label: 'Contact', href: '#contact', id: 'contact' },
+    { label: t.nav?.contact || 'Contact', href: '#contact', id: 'contact' },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
