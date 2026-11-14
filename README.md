@@ -1,13 +1,12 @@
 # Singathurai C — Portfolio Website
 
-Personal portfolio of **Singathurai C**, a Software · Cloud · DevOps Engineer.
+Personal portfolio of **Singathurai C**, Backend Developer & DevOps Engineer.
 
-**Live:** https://singathurai-portfolio.onrender.com/
+🌐 **Live Website:** [https://singathurai-portfolio.vercel.app](https://singathurai-portfolio.vercel.app)
 
 ## About
 
-A fast, dependency-free portfolio built with plain HTML, CSS and JavaScript.
-No frameworks, no build step — just open `index.html`.
+High-performance, modern portfolio built with **React 18**, **Vite**, **TypeScript**, and **Tailwind CSS**. Features a Deep Obsidian & Electric Violet theme, 3D interactive wireframe globe, AI Resume Assistant, Interactive CLI Terminal, and DevSecOps CI/CD integration.
 
 ## Features
 
